@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         // Send data to Google Apps Script Web App
-        fetch("https://script.google.com/macros/s/AKfycbzHgjjNcsapueLrlxajitCX-OsljA3-Nfphrifg5k-ruYiVkkXx65Vqv02Zua5N6QNx/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbz2CecJcxo_G7P-qteqeT8ed5Z6FawyWxBlYmCP0G6T7VRF6gINqRdcxMyKJjbhV9H7/exec", {
             method: "POST",
-            mode: "no-cors",  // ✅ Prevents browser from blocking the request
+            mode: "no-cors",  
             headers: {
                 "Content-Type": "application/json"
             },
