@@ -1,0 +1,6 @@
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #0056b3, #007bff);
+    color: white;
+}

@@ -1,0 +1,69 @@
+.catalogue {
+    padding: 50px 8%;
+    background: #fff;
+    overflow-x: auto; /* Enables horizontal scroll if needed */
+}
+
+.catalogue table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px; /* Prevent table from breaking */
+}
+
+.catalogue th, .catalogue td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Responsive: stack table rows on small screens */
+@media (max-width: 600px) {
+    .catalogue {
+        padding: 20px 4%;  /* Adjust padding to fit smaller screens */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    .catalogue table {
+        width: 100% !important;
+        min-width: unset !important;
+        border-collapse: collapse;
+    }
+
+    .catalogue thead {
+        display: none;
+    }
+
+    .catalogue tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        background: #f9f9f9;
+        box-sizing: border-box;
+    }
+
+    .catalogue td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+
+    .catalogue td:last-child {
+        border-bottom: none;
+    }
+
+    .catalogue td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #0056b3;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan Flow - Product Catalogue</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/contactForm.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Milan Flow</div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#catalogue">Catalogue</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Reliable Solutions for Water Flow</h1>
+        <p>Electric Motors, Submersible Pumps, Ball Valves, and PVC/CPVC Solvents</p>
+    </section>
+
+    <!-- Product Categories -->
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card" data-title="Electric Motors"
+                data-desc="High-quality electric motors suitable for various applications. Power: 0.5HP - 5HP."
+                data-img="images/electric_motor.jpg">
+                <img src="images/electric_motor.jpg" alt="Electric Motors">
+                <h3>Electric Motors</h3>
+            </div>
+            <div class="product-card" data-title="Submersible Pumps"
+                data-desc="Reliable submersible pumps for clean water supply and borewell applications."
+                data-img="images/submersible.jpg">
+                <img src="images/submersible.jpg" alt="Submersible Pumps">
+                <h3>Submersible Pumps</h3>
+            </div>
+            <div class="product-card" data-title="PVC & CPVC Ball Valves"
+                data-desc="Durable PVC and CPVC ball valves available in various sizes for plumbing and industrial use."
+                data-img="images/ball_valve.jpg">
+                <img src="images/ball_valve.jpg" alt="Ball Valves">
+                <h3>PVC & CPVC Ball Valves</h3>
+            </div>
+            <div class="product-card" data-title="PVC & CPVC Solvents"
+                data-desc="Strong and reliable PVC & CPVC solvent cement for leak-proof pipe fittings."
+                data-img="images/solvent.jpg">
+                <img src="images/solvent.jpg" alt="Solvents">
+                <h3>PVC & CPVC Solvents</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue Table -->
+    <section id="catalogue" class="catalogue">
+        <h2>Product Catalogue</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Size/Power</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Product Name">Electric Motor 1 HP</td>
+                    <td data-label="Category">Electric Motor</td>
+                    <td data-label="Size/Power">1 HP</td>
+                    <td data-label="Price">₹4500</td>
+                </tr>
+                <tr>
+                    <td data-label="Product Name">Submersible Pump 0.5 HP</td>
+                    <td data-label="Category">Submersible</td>
+                    <td data-label="Size/Power">0.5 HP</td>
+                    <td data-label="Price">₹6000</td>
+                </tr>
+                <tr>
+                    <td data-label="Product Name">PVC Ball Valve</td>
+                    <td data-label="Category">Ball Valve</td>
+                    <td data-label="Size/Power">1 inch</td>
+                    <td data-label="Price">₹120</td>
+                </tr>
+                <tr>
+                    <td data-label="Product Name">CPVC Solvent Cement</td>
+                    <td data-label="Category">Solvent</td>
+                    <td data-label="Size/Power">100 ml</td>
+                    <td data-label="Price">₹90</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="formResponse" style="display:none; color:green;">Message sent successfully!</p>
+        </form>
+    </section>
+
+
+    <!-- Product Popup Modal -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <img id="popupImg" src="" alt="Product Image">
+            <h3 id="popupTitle"></h3>
+            <p id="popupDesc"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Milan Flow. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
