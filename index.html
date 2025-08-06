@@ -4,21 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Milan Flow - Reliable solutions for water flow. Electric Motors, Submersible Pumps, Ball Valves, and PVC/CPVC Solvents.">
     <title>Milan Flow - Product Catalogue</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/hero.css">
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/popup.js" defer></script>
     <script src="scripts/contactForm.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Header -->
     <header>
-        <div class="logo">Milan Flow</div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Milan Flow Logo">
+            <span>Milan Flow</span>
+        </div>
         <nav>
             <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -26,7 +40,7 @@
                 <li><a href="#catalogue">Catalogue</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" aria-label="Menu Button" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -34,12 +48,21 @@
         </nav>
     </header>
 
-
-
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <h1>Reliable Solutions for Water Flow</h1>
         <p>Electric Motors, Submersible Pumps, Ball Valves, and PVC/CPVC Solvents</p>
+        <div class="hero-buttons">
+            <a href="#products" class="cta-btn">Explore Products</a>
+            <a href="#contact" class="cta-btn contact-btn">Contact Us</a>
+        </div>
     </section>
 
     <!-- Product Categories -->
@@ -61,13 +84,13 @@
             <div class="product-card" data-title="PVC & CPVC Ball Valves"
                 data-desc="Durable PVC and CPVC ball valves available in various sizes for plumbing and industrial use."
                 data-img="images/ball_valve.jpg">
-                <img src="images/ball_valve.jpg" alt="Ball Valves">
+                <img src="images/ball_valve.jpg" alt="PVC and CPVC Ball Valves">
                 <h3>PVC & CPVC Ball Valves</h3>
             </div>
             <div class="product-card" data-title="PVC & CPVC Solvents"
                 data-desc="Strong and reliable PVC & CPVC solvent cement for leak-proof pipe fittings."
                 data-img="images/solvent.jpg">
-                <img src="images/solvent.jpg" alt="Solvents">
+                <img src="images/solvent.jpg" alt="PVC and CPVC Solvents">
                 <h3>PVC & CPVC Solvents</h3>
             </div>
         </div>
@@ -87,28 +110,28 @@
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="Product Name">Electric Motor 1 HP</td>
-                    <td data-label="Category">Electric Motor</td>
-                    <td data-label="Size/Power">1 HP</td>
-                    <td data-label="Price">₹4500</td>
+                    <td>Electric Motor 1 HP</td>
+                    <td>Electric Motor</td>
+                    <td>1 HP</td>
+                    <td>₹4500</td>
                 </tr>
                 <tr>
-                    <td data-label="Product Name">Submersible Pump 0.5 HP</td>
-                    <td data-label="Category">Submersible</td>
-                    <td data-label="Size/Power">0.5 HP</td>
-                    <td data-label="Price">₹6000</td>
+                    <td>Submersible Pump 0.5 HP</td>
+                    <td>Submersible</td>
+                    <td>0.5 HP</td>
+                    <td>₹6000</td>
                 </tr>
                 <tr>
-                    <td data-label="Product Name">PVC Ball Valve</td>
-                    <td data-label="Category">Ball Valve</td>
-                    <td data-label="Size/Power">1 inch</td>
-                    <td data-label="Price">₹120</td>
+                    <td>PVC Ball Valve</td>
+                    <td>Ball Valve</td>
+                    <td>1 inch</td>
+                    <td>₹120</td>
                 </tr>
                 <tr>
-                    <td data-label="Product Name">CPVC Solvent Cement</td>
-                    <td data-label="Category">Solvent</td>
-                    <td data-label="Size/Power">100 ml</td>
-                    <td data-label="Price">₹90</td>
+                    <td>CPVC Solvent Cement</td>
+                    <td>Solvent</td>
+                    <td>100 ml</td>
+                    <td>₹90</td>
                 </tr>
             </tbody>
         </table>
@@ -118,14 +141,29 @@
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="name" placeholder="Your Name" autocomplete="name" required>
+            <input type="email" name="email" placeholder="Your Email" autocomplete="email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
             <p id="formResponse" style="display:none; color:green;">Message sent successfully!</p>
         </form>
-    </section>
 
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/p/MILANflow-61573853685187/" target="_blank" aria-label="Facebook"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/milanflowtumkur/" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/9148723271" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+919148723271" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p>📞 Call Us: <a href="tel:+919148723271">+91 9148723271</a></p>
+            <p>📧 Email: <a href="mailto:milanagencytumkur@gmail.com">milanagencytumkur@gmail.com</a></p>
+        </div>
+    </section>
 
     <!-- Product Popup Modal -->
     <div class="popup-overlay" id="popup">
@@ -142,7 +180,10 @@
         <p>© 2025 Milan Flow. All rights reserved.</p>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
 </body>
 
 </html>
